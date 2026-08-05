@@ -1,0 +1,119 @@
+<!-- header area -->
+<header class="header hd-1">
+  <!-- header top -->
+  <div class="header-top">
+    <div class="container px-lg-0">
+      <div class="header-top-wrap">
+        <div class="header-top-left">
+          <div class="header-top-social">
+            <span>Follow Us: </span>
+            <a href="https://www.facebook.com/EpoRexIndia" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/eporexindia/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@eporexindia808" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="header-top-right">
+          <div class="header-top-list">
+            <ul>
+              <li>
+                <a href="mailto:info@eporex.in"><i class="far fa-envelopes"></i> info@eporex.in</a>
+              </li>
+              <li>
+                <a href="tel:+917358010419"><i class="far fa-phone-volume"></i> +91 73580 10419</a>
+              </li>
+              <li>
+                <a href="#"><i class="far fa-alarm-clock"></i> Mon - Sat (9AM - 7PM)</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- header top end -->
+
+  <!-- navbar -->
+  <div class="main-navigation">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container position-relative">
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/img/logo/logo.png" alt="logo" />
+        </a>
+        <div class="mobile-menu-right">
+          <div class="mobile-menu-btn">
+            <button type="button" class="nav-right-link search-box-outer"><i class="far fa-search"></i></button>
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar">
+          <div class="offcanvas-header">
+            <a href="index.html" class="offcanvas-brand" id="offcanvasNavbarLabel">
+              <img src="assets/img/logo/logo.png" alt="" />
+            </a>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+              <i class="far fa-xmark"></i>
+            </button>
+          </div>
+          <div class="offcanvas-body gap-xl-4">
+            <ul class="navbar-nav justify-content-center flex-grow-1">
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Products</a>
+                <ul class="dropdown-menu fade-down">
+                  <li><a class="dropdown-item" href="service.html">Our Products</a></li>
+                  <li><a class="dropdown-item" href="epoxy-tile-grout.html">EPOREX CEYMCO P10</a></li>
+                  <li><a class="dropdown-item" href="resin-art.html">EPOREX RESIN ART</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+              <li class="nav-item"><a class="nav-link" href="https://www.eporex.in/blog/">Blog</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+            <!-- nav-right -->
+            <div class="nav-right">
+              <div class="search-btn">
+                <button type="button" class="nav-right-link search-box-outer"><i class="far fa-search"></i></button>
+              </div>
+              <div class="nav-btn">
+                <a href="contact.html" class="theme-btn">Let's Talk<i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!-- navbar end-->
+</header>
+<!-- header area end -->
+
+<!-- Auto active link highlighter -->
+<script>
+  (function () {
+    var currentPage = window.location.pathname.split("/").pop() || "index.html";
+    var navLinks = document.querySelectorAll(".main-navigation .nav-link, .main-navigation .dropdown-item");
+    navLinks.forEach(function (link) {
+      var href = link.getAttribute("href");
+      if (href && (href === currentPage || (currentPage === "" && href === "index.html"))) {
+        link.classList.add("active");
+        var parentDropdown = link.closest(".dropdown");
+        if (parentDropdown) {
+          var toggle = parentDropdown.querySelector(".dropdown-toggle");
+          if (toggle) toggle.classList.add("active");
+        }
+      }
+    });
+  })();
+</script>

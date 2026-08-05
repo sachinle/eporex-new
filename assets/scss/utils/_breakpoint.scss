@@ -1,0 +1,18 @@
+// max breakpoint
+$max-1399: "all and (max-width: 1399px)";
+$max-1199: "all and (max-width: 1199px)";
+$max-991: "all and (max-width: 991px)";
+$max-767: "all and (max-width: 767px)";
+
+// min breakpoint
+$min-1400: "all and (min-width: 1400px)";
+$min-1200: "all and (min-width: 1200px)";
+$min-992: "all and (min-width: 992px)";
+$min-768: "all and (min-width: 768px)";
+
+// between breakpoint
+$bet-1400-1599: "all and (min-width: 1400px) and (max-width: 1599px)";
+$bet-1200-1399: "all and (min-width: 1200px) and (max-width: 1399px)";
+$bet-992-1199: "all and (min-width: 992px) and (max-width: 1199px)";
+$bet-768-991: "all and (min-width: 768px) and (max-width: 991px)";
+$bet-768-1199: "all and (min-width: 768px) and (max-width: 1199px)";

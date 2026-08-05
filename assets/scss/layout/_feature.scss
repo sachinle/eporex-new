@@ -1,0 +1,53 @@
+@use "../utils" as *;
+
+/*====================
+20. Feature css 
+======================*/
+
+/* feature-area */
+.feature {
+  &-wrap {
+    position: relative;
+  }
+
+  &-item {
+    position: relative;
+    padding: 30px 25px;
+    border-radius: 25px;
+    @include bg-opacity(var(--theme-color), 0.05);
+
+    .count {
+      position: absolute;
+      right: 30px;
+      top: 30px;
+      font-weight: 500;
+      color: var(--color-dark);
+      font-size: 20px;
+    }
+  }
+
+  &-icon {
+    flex-shrink: 0;
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    line-height: 57px;
+    border-radius: 50%;
+    background: var(--theme-color);
+    margin: 0 0 30px 0;
+
+    img {
+      width: 28px;
+      @include filter-white;
+    }
+  }
+
+  &-info {
+    h4 {
+      font-size: 22px;
+      margin-bottom: 25px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid var(--border-info-color);
+    }
+  }
+}

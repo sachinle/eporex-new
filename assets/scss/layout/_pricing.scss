@@ -1,0 +1,129 @@
+@use "../utils" as *;
+
+/* ===================
+39. Pricing css 
+====================== */
+
+.pricing-area {
+  .pricing {
+    &-item {
+      @include bg-opacity(var(--theme-color), 0.06);
+      padding: 35px;
+      border-radius: 25px;
+    }
+
+    &-icon {
+      flex-shrink: 0;
+      width: 75px;
+      height: 75px;
+      line-height: 73px;
+      background: var(--theme-color);
+      border-radius: 50px;
+      text-align: center;
+      box-shadow: var(--box-shadow);
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        background: var(--color-dark);
+        transform: scale(0);
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        border-radius: 100px;
+        transition: 0.4s ease-in-out;
+      }
+
+      img {
+        width: 35px;
+        @include filter-white;
+      }
+    }
+
+    &-item:hover .pricing-icon::before {
+      transform: scale(1);
+    }
+
+    &-header {
+      display: flex;
+      gap: 15px;
+
+      h4 {
+        font-size: 25px;
+        margin-bottom: 8px;
+      }
+    }
+
+    &-price {
+      background: var(--color-white);
+      border-radius: 25px;
+      padding: 25px;
+      color: var(--color-dark);
+      font-weight: 700;
+      margin: 25px 0;
+      box-shadow: var(--box-shadow);
+
+      .amount {
+        font-size: 40px;
+        line-height: 1;
+      }
+    }
+
+    &-btn {
+      margin-top: 30px;
+
+      .theme-btn2 {
+        width: 100%;
+      }
+    }
+
+    &-feature {
+      li {
+        margin-bottom: 10px;
+        color: var(--body-text-color);
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        i {
+          color: var(--theme-color);
+          margin-right: 8px;
+        }
+      }
+    }
+
+    &-bottom-list {
+      margin-top: 30px;
+      border-radius: 50px;
+      padding: 8px 15px;
+
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px 20px;
+
+        li {
+          color: var(--color-dark);
+          text-transform: capitalize;
+          font-weight: 500;
+          border: 1px solid var(--border-info-color);
+          border-radius: 50px;
+          padding: 2px 18px 2px 18px;
+
+          i {
+            color: var(--theme-color);
+            margin-right: 6px;
+          }
+        }
+      }
+    }
+  }
+}

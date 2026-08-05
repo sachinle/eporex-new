@@ -1,0 +1,11 @@
+@use "sass:list";
+
+// spacing number generate
+@function spacingNumberGen($startNum, $increaseNum, $totalNum) {
+  $numbers: ();
+  @for $i from 0 through ($totalNum - 1) {
+    $value: $startNum + ($i * $increaseNum);
+    $numbers: list.append($numbers, $value);
+  }
+  @return $numbers;
+}

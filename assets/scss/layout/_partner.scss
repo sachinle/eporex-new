@@ -1,0 +1,40 @@
+@use "../utils" as *;
+
+/*====================
+32. Partner css 
+======================*/
+
+.partner {
+  &-title {
+    position: relative;
+    margin-bottom: 60px;
+
+    h4 {
+      background: var(--color-white);
+      width: fit-content;
+      margin: auto;
+      padding: 2px 20px;
+      font-size: 24px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 13px;
+      width: 100%;
+      border-bottom: 1px solid var(--border-info-color);
+      z-index: -1;
+
+      @media #{$max-767} {
+        bottom: -20px;
+      }
+    }
+  }
+
+  &-item {
+    background: var(--theme-bg-light2);
+    padding: 10px;
+    border-radius: 10px;
+  }
+}

@@ -1,0 +1,81 @@
+@use "../utils" as *;
+
+/* ===================
+21. Counter css 
+====================== */
+
+.counter {
+  &-title {
+    position: relative;
+    margin-bottom: 60px;
+
+    h4 {
+      background: var(--color-white);
+      width: fit-content;
+      margin: auto;
+      padding: 2px 20px;
+      font-size: 24px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 13px;
+      width: 100%;
+      border-bottom: 1px solid var(--border-info-color);
+      z-index: -1;
+
+      @media #{$max-767} {
+        bottom: -20px;
+      }
+    }
+  }
+
+  &-box {
+    position: relative;
+
+    @media #{$max-767} {
+      padding-bottom: 20px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 40px;
+      top: 0;
+      height: 100%;
+      border-right: 1px solid var(--border-info-color);
+
+      @media #{$max-767} {
+        border-right: none;
+        border-bottom: 1px solid var(--border-info-color);
+        width: 100%;
+        right: 0;
+      }
+    }
+
+    .content {
+      .title {
+        font-size: 18px;
+        margin-bottom: 80px;
+        width: 65%;
+        line-height: 1.2;
+        color: var(--color-dark);
+      }
+
+      .info {
+        .counter {
+          font-size: 50px;
+          color: var(--color-dark);
+          line-height: 1;
+          font-weight: 500;
+        }
+
+        .unit {
+          color: var(--color-dark);
+        }
+      }
+    }
+  }
+}

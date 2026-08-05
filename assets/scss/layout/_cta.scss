@@ -1,0 +1,51 @@
+@use "../utils" as *;
+
+/*====================
+32. Cta css 
+======================*/
+
+.cta {
+  &-wrap {
+    background: var(--theme-color);
+    border-radius: 20px;
+    padding: 50px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &-content {
+    h4 {
+      color: var(--color-white);
+      font-size: 35px;
+      margin-bottom: 50px;
+    }
+
+    p {
+      color: var(--color-white);
+    }
+  }
+
+  &-img {
+    .img-1 {
+      position: absolute;
+      right: 30%;
+      bottom: 0;
+      width: 33%;
+
+      @media #{$max-767} {
+        display: none;
+      }
+    }
+
+    .img-2 {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 35%;
+
+      @media #{$max-767} {
+        width: 72%;
+      }
+    }
+  }
+}

@@ -1,0 +1,164 @@
+@use "../utils" as *;
+
+/*====================
+11. Site title css
+======================*/
+
+.site-heading {
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 1;
+
+  .site-title-tagline {
+    display: inline-block;
+    color: var(--theme-color);
+    font-weight: 500;
+    text-transform: capitalize;
+    font-size: 18px;
+    @include bg-opacity(var(--theme-color), 0.1);
+    border-radius: 50px;
+    padding: 2px 15px 2px 3px;
+    margin-bottom: 15px;
+
+    i {
+      font-size: 16px;
+      width: 30px;
+      height: 30px;
+      line-height: 31px;
+      background: var(--theme-color);
+      color: var(--color-white);
+      text-align: center;
+      border-radius: 50px 50px 50px 50px;
+      margin-right: 5px;
+    }
+
+    &.light {
+      background: var(--color-white);
+      color: var(--theme-color);
+
+      i {
+        background: var(--theme-color);
+        color: var(--color-white);
+      }
+    }
+  }
+
+  .site-title {
+    font-weight: 600;
+    font-size: 50px;
+    color: var(--color-dark);
+    margin-bottom: 0;
+
+    @media #{$max-767} {
+      font-size: 30px;
+    }
+
+    span {
+      color: var(--theme-color);
+    }
+
+    .text-gradient {
+      color: transparent;
+      background-image: var(--gradient3);
+      background-clip: text;
+    }
+  }
+
+  p {
+    margin-top: 15px;
+  }
+
+  &.inline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+
+    .site-title {
+      font-size: 45px;
+
+      @media #{$max-767} {
+        font-size: 30px;
+      }
+    }
+  }
+
+  .heading-divider {
+    display: inline-block;
+    position: relative;
+    border-bottom: 5px solid var(--theme-color);
+    width: 90px;
+    height: 4px;
+    border-radius: 50px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 15px;
+      border-bottom: 5px solid var(--color-white);
+      border-radius: 50px;
+      animation: heading-move 5s infinite linear;
+    }
+
+    &.light {
+      border-color: var(--color-white);
+
+      &::after {
+        border-color: var(--theme-color);
+      }
+    }
+  }
+}
+
+.site-heading.sh-2 {
+  .site-title-tagline {
+    background: transparent;
+    border: 1px solid rgba(#fe712b, 0.2);
+    color: var(--theme-color);
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 1px;
+    padding: 2px 15px;
+    font-family: var(--body-font);
+
+    i {
+      background: transparent;
+      margin: 0;
+      line-height: unset;
+      height: unset;
+      width: unset;
+    }
+  }
+}
+
+@-webkit-keyframes heading-move {
+  0% {
+    transform: translateX(-1px);
+  }
+
+  50% {
+    transform: translateX(75px);
+  }
+
+  100% {
+    transform: translateX(-1px);
+  }
+}
+
+@keyframes heading-move {
+  0% {
+    transform: translateX(-1px);
+  }
+
+  50% {
+    transform: translateX(75px);
+  }
+
+  100% {
+    transform: translateX(-1px);
+  }
+}

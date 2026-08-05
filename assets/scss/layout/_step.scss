@@ -1,0 +1,83 @@
+@use "../utils" as *;
+
+/*====================
+37. Step/process css  
+======================*/
+
+.process {
+  &-area {
+    position: relative;
+  }
+
+  &-wrap {
+    background: var(--theme-color2);
+    border-radius: 25px;
+  }
+
+  &-item {
+    background: var(--color-white);
+    padding: 40px;
+    border-radius: 30px;
+    position: relative;
+
+    .count {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      border: 1px solid var(--border-info-color);
+      padding: 2px 14px;
+      border-radius: 50px;
+      transition: var(--transition);
+    }
+
+    &:hover {
+      .count {
+        background: var(--theme-color2);
+        color: var(--color-white);
+      }
+    }
+
+    .icon {
+      width: 65px;
+      height: 65px;
+      line-height: 60px;
+      background: var(--color-dark);
+      border-radius: 50px;
+      text-align: center;
+      margin-bottom: 30px;
+
+      img {
+        @include filter-white;
+        width: 32px;
+      }
+    }
+
+    .content {
+      margin-bottom: 50px;
+
+      h4 {
+        margin-bottom: 30px;
+        font-size: 24px;
+      }
+    }
+
+    .img {
+      mask-image: url(../img/shape/is-1.svg);
+      display: block;
+      mask-size: cover;
+      mask-repeat: no-repeat;
+      width: 220px;
+      height: 120px;
+      mask-position: center center;
+      border-radius: 4px;
+
+      &.img-2 {
+        mask-image: url(../img/shape/is-2.svg);
+      }
+
+      &.img-3 {
+        mask-image: url(../img/shape/is-3.svg);
+      }
+    }
+  }
+}

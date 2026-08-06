@@ -11,6 +11,7 @@
     padding-bottom: 25px;
     display: flex;
     gap: 20px;
+    height: 100%;
 
     @media #{$max-991} {
       flex-direction: column;
@@ -22,6 +23,11 @@
       padding: 40px;
       position: relative;
       z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      width: 100%;
 
       .icon {
         position: absolute;
@@ -68,7 +74,9 @@
 
         &-img img {
           width: 60px;
-          border-radius: 50px;
+          height: 60px;
+          object-fit: cover;
+          border-radius: 50%;
         }
 
         &-info {
@@ -131,15 +139,25 @@
   }
 
   &-left-img {
+    height: 100%;
     img {
       border-radius: 20px;
       width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
 }
 
 /* testimonial-slider */
 .testimonial-slider {
+  .owl-stage {
+    display: flex !important;
+  }
+  .owl-item {
+    display: flex !important;
+    flex: 1 0 auto;
+  }
   .owl-dots {
     text-align: center;
     margin-top: 10px;
